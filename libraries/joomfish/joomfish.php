@@ -101,7 +101,7 @@ class JoomFish
 		$dispatcher->trigger('onBeforeTranslationProcess', array(&$rows, $language, &$fielddata, $querySQL, $onlytransFields));
 		
 		// If I write content in non-default language then this skips the translation!
-		//if($language == $defaultLang) return $rows;
+		if($language == $defaultLang) return $rows;
 		$rowsLanguage = $language;
 		if (count($rows) > 0)
 		{
